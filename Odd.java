@@ -14,5 +14,14 @@ public class Odd
     .filter(n -> n % 2 != 0)
     .collect(Collectors.toList());
     System.out.println("Odd Numbers: " + oddNumbers);
+
+System.out.println("reverse order : ");
+    List<Integer> num=list.stream() 
+    .distinct()
+    .sorted(Comparator.reverseOrder())
+    .collect(Collectors.toList());
+    System.out.print(num);
+    //.forEach(System.out::println);
+
     }
 }
