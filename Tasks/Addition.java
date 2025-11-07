@@ -16,7 +16,16 @@ public class Addition
         .filter(n->n%2==0)
         .sorted()
         .reduce(0,(a,b)->a+b);
-        System.err.println(ls);
+        
+        System.err.println("sum : "+ ls);
+
+         int min= list.stream()
+         .reduce(Integer.MAX_VALUE,(a,b)->a<b?a:b);
+         System.err.println("Minimum value : "+min);
+
+          int max= list.stream()
+         .reduce(Integer.MIN_VALUE,(a,b)->a>b?a:b);
+         System.err.println("Maximum value : "+max);
         
         
        

@@ -13,7 +13,7 @@ public class Flatten{
        Arrays.asList(5));
 
        List<Integer> fList=list.stream()
-    .flatMap(List::stream)       //nested structures into single stream(convert list of iteam into single ele)[1,2,3,4]   1 2 3 4 
+    .flatMap(inner->inner.stream())  //.flatMap(List::stream)     //nested structures into single stream(convert list of iteam into single ele)[1,2,3,4]   1 2 3 4 
        .filter(n->n%2==1)
        .distinct()
        .map(n->n*n)
