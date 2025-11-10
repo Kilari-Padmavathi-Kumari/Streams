@@ -38,7 +38,8 @@ public class CountingFilter
            new CountingFilter(21330,"activity","3"));
 
           Map<String,Long>slist= list.stream()
-           .collect(Collectors.groupingBy(c->c.getCategory(), Collectors.counting()));
+          .collect(Collectors.groupingBy(CountingFilter::getCategory,Collectors.counting()));
+          // .collect(Collectors.groupingBy(c->c.getCategory(), Collectors.counting()));
            System.err.println(slist);
        } 
 }
