@@ -1,8 +1,8 @@
 //Find the names of employees whose names start with “A”.
 
-import java.lang.reflect.Array;
+
 import java.util.*;
-import java.util.logging.Filter;
+
 import java.util.stream.*;
 public class Character
 {

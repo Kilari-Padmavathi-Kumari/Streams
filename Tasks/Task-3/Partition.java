@@ -32,7 +32,7 @@ public class Partition
 
     public static void main(String[] args) {
       List<Partition> list=Arrays.asList(new Partition("Cse", "josh",50000),
-     new Partition("Cse", "vedha",52000),new Partition("EEE", "vedha",42000),new Partition("EEE", "kalyan",62000),new Partition("Mech", "josh",32000) ) ;
+     new Partition("Cse", "vedha",52000),new Partition("EEE", "vedha",42000),new Partition("EEE", "kalyan",62000),new Partition("Mech", "josh",32000) ) ;           //  partition return boolean and data
       Map<Boolean,List<Partition>> ls=list.stream()
       .collect(Collectors.partitioningBy(s->s.salary>=50000));
       System.err.println(ls);

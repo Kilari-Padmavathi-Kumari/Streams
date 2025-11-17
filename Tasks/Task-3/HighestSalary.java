@@ -1,6 +1,5 @@
 //Find the highest-paid employee in the company.
-import java.lang.reflect.Array;
-import java.text.Collator;
+
 import java.util.*;
 import java.util.stream.*;
 public class HighestSalary
@@ -34,7 +33,8 @@ public class HighestSalary
       List<HighestSalary> list=Arrays.asList(new HighestSalary("Cse", "josh",2200),
      new HighestSalary("Cse", "vedha",3200),new HighestSalary("EEE", "vedha",4200),new HighestSalary("EEE", "kalyan",2200),new HighestSalary("Mech", "josh",1200) ) ;
      HighestSalary ls=list.stream()
-     .max(Comparator.comparingInt(HighestSalary::getSalary))
+    .max(Comparator.comparingInt(HighestSalary::getSalary))
+                                                                                                                                    //  .min(Comparator.comparingInt(HighestSalary::getSalary))
      .get();
      System.err.println(ls);
      
